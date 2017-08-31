@@ -1,0 +1,7 @@
+ String handleBefore = driver.getWindowHandle();       // Parent window
+
+ for (String handle : driver.getWindowHandles()) {          //Switch to new window
+	    	 
+ driver.switchTo().window(handle);}
+
+ driver.switchTo().window(handleBefore);   // Switch to Parent

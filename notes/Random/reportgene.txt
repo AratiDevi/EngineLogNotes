@@ -1,0 +1,211 @@
+package Technical;
+
+import java.util.Locale;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+import com.relevantcodes.extentreports.NetworkMode;
+
+//import com.relevantcodes.extentreports.ExtentReports;
+
+import CommonFunction.RW;
+
+
+
+public class WorklistAccess extends RW {
+ ExtentReports report;
+ ExtentTest test;
+ 
+ public void worklistindex(WebDriver driver1) throws Exception {
+  WebDriver driver= driver1;
+
+  // new instance
+  report=new ExtentReports("C:\\Users\\Reshma\\workspace\\demoforreport\\WorklistA.html",true);
+  //report=new ExtentReports("C:\\Users\\Reshma\\workspace\\WorklistAccess\\WorklistA.html", new Locale("es"));
+  //report.loadConfig(WorklistAccess.class,"D:\\Work\\Softwares\\extentreports-java-v2.40.1-beta5-final\\extent-config.xml");
+  
+  
+     test=report.startTest("WorklistAccess");
+     
+     /*ExtentTest test = report
+          .startTest("WorklistAccess")
+          .assignCategory("worklistindex");
+       */
+    
+     
+                                     // Mouse Hover Action
+  // path for "Technical"
+  WebElement technical = driver.findElement(By.xpath(data.getData(5, 1, 2)));
+  Actions action = new Actions(driver);
+  action.moveToElement(technical).build().perform();
+  action.moveToElement(technical).perform();
+  Thread.sleep(2000);
+  test.log(LogStatus.INFO, "technical module");
+  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+  Thread.sleep(2000);
+
+  // path for "Admin"
+  WebElement admin = driver.findElement(By.xpath(data.getData(5, 3, 2)));
+  admin.click();
+  test.log(LogStatus.INFO, "Admin module");
+  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+  Thread.sleep(2000);
+
+  // path for "worklistaccess"
+  WebElement worklistaccess = driver.findElement(By.xpath(data.getData(5, 4, 2)));
+  worklistaccess.click();
+  test.log(LogStatus.INFO, "WorklistAccess module");
+  Thread.sleep(5000);
+
+  // For " Giving the Access to user"
+  driver.findElement(By.xpath(data.getData(5, 5, 2))).click();
+  test.log(LogStatus.INFO, "Giving the Access to user");
+  Thread.sleep(1000);
+
+  // Select "UserName" Dropdown
+  Select username = new Select(driver.findElement(By.id(data.getData(5, 6, 2))));
+  Thread.sleep(2000);
+  username.selectByIndex(1);
+ // username.selectByVisibleText(data.getData(5, 7, 2));
+  test.log(LogStatus.INFO, "UserName dropdown");
+  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+  Thread.sleep(4000);
+
+  // Select "ActionType" Dropdown
+  Select Actiontype = new Select(driver.findElement(By.xpath(data.getData(5, 8, 2))));
+  Actiontype.selectByVisibleText(data.getData(5, 9, 2));
+  test.log(LogStatus.INFO, "ActionType dropdown");
+  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+  Thread.sleep(2000);
+
+  // Select checkboxes
+  // NCR
+  driver.findElement(By.xpath(data.getData(5, 10, 2))).click();
+  test.log(LogStatus.INFO, "NCR dropdown");
+  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+  Thread.sleep(2000);
+  // DEFECT Checkbox
+  driver.findElement(By.xpath(data.getData(5, 11, 2))).click();
+  test.log(LogStatus.INFO, "DEFECT dropdown");
+  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+  Thread.sleep(2000);
+  // NOTE Checkbox
+  driver.findElement(By.xpath(data.getData(5, 12, 2))).click();
+  test.log(LogStatus.INFO, "NOTE dropdown");
+  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+  Thread.sleep(2000);
+
+  // Click on SAVE button
+  driver.findElement(By.xpath(data.getData(5, 13, 2))).click();
+  test.log(LogStatus.INFO, "SAVE Button");
+  Thread.sleep(3000);
+  
+  Assert.assertTrue(true);
+  test.log(LogStatus.PASS, "Search Functionality");
+  
+  
+  report.endTest(test);
+  report.flush();
+       
+ }
+                                   
+                                        // For Validation "Search Functionality"
+  
+  public void search(WebDriver driver1) throws Exception {
+   WebDriver driver = driver1;
+   test=report.startTest("search");
+   
+    /* ExtentTest test = report
+            .startTest("Search")
+            .assignCategory( "Search");
+   */
+  // For selecting only "REWORK" Dropdown
+  Select username1 = new Select(driver.findElement(By.xpath(data.getData(5, 14, 2))));
+  username1.selectByVisibleText(data.getData(5, 15, 2));
+  test.log(LogStatus.INFO, "Rework Button");
+  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+  Thread.sleep(1000);
+
+  // For " Search" Button
+  driver.findElement(By.xpath(data.getData(5, 16, 2))).click();
+  test.log(LogStatus.INFO, "Search Button");
+  Thread.sleep(3000);
+  Assert.assertTrue(true);
+  test.log(LogStatus.FAIL, "Search Functionality");
+  
+  report.endTest(test);
+  report.flush();
+  
+  }
+  
+  
+  
+
+                              // For validation (by using " Delete" functionality)
+  public void delete(WebDriver driver1) throws Exception {
+   WebDriver driver = driver1;
+   //ExtentReports object = ExtentReports.get(WorklistAccess.class);
+   test=report.startTest("delete");
+   /*
+    ExtentTest test = report
+            .startTest("Delete")
+            .assignCategory( "Delete");
+   */
+   
+     // Get total Record count
+  String Record = driver.findElement(By.xpath(data.getData(5, 17, 2))).getText(); 
+  System.out.println("total record counts are  " + Record);
+
+  // For " Delete" any one record
+  driver.findElement(By.xpath(data.getData(5, 18, 2))).click();
+  test.log(LogStatus.INFO, "Delete any one record");
+  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+  Thread.sleep(4000);
+  // Capturing "alert message"
+  Alert alert = driver.switchTo().alert();                                         
+     String Alert = alert.getText();
+     System.out.print("Alert msg for deleteing any one record sent is:"+Alert);
+     alert.accept();
+     test.log(LogStatus.INFO, "alert for delete record");
+     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+     Thread.sleep(4000);
+  
+         // For verifying the "access record" count
+  String verifyrecord = driver.findElement(By.xpath(data.getData(5, 19, 2))).getText(); // Reworked job
+  System.out.println("Verified record counts are  " + verifyrecord);
+  Assert.assertTrue(true);
+  test.log(LogStatus.FATAL, "For validation 3");
+  
+  report.endTest(test);
+  report.flush();
+  
+  }
+  
+  
+
+                                    // for " * fields is not entered" {for Username}
+  public void alertuserName(WebDriver driver1) throws Exception {
+   WebDriver driver = driver1;
+   //ExtentReports object = ExtentReports.get(WorklistAccess.class);
+   test=report.startTest("alertuserName");
+  
+   /*ExtentTest test = report
+           .startTest("Username")
+           .assignCategory( "Username");*/
+   
+   
+  // For " Giving the Access to user"
+  driver.findElement(By.xpath(data.getData(5, 20, 2))).click();
+  test.log..

@@ -1,0 +1,54 @@
+package Browser;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+public class VerifypageTitle  {
+
+  
+  WebDriver driver;
+  
+  @Test
+  @Parameters("browser")
+  public void VerifyTitle(String browser) throws InterruptedException{
+
+   
+   //String chrome=browser;
+   
+  /* if (browser.equalsIgnoreCase("firefox"))
+   {
+    driver = new FirefoxDriver();
+    
+   }*/
+
+
+     if(browser.equalsIgnoreCase("chrome"))
+   {
+    System.setProperty("webdriver.chrome.driver", "C:\\Users\\Priti\\workspace\\chromedriver\\chromedriver.exe");
+    
+     driver = new ChromeDriver();
+     
+
+   }
+
+   
+   else if(browser.equalsIgnoreCase("IE")){
+    System.setProperty("webdriver.ie.driver", "C:\\Users\\Priti\\workspace\\IEDriverServer_x64_3.3.0\\IEDriverServer.exe");
+
+     driver = new InternetExplorerDriver();
+     
+   }
+
+
+   driver.manage().window().maximize();
+   driver.get("http://114.79.180.66/JIBE/Technical/worklist/worklist.aspx");
+   System.out.println(driver.getTitle());
+   driver.quit();
+   
+   
+ }
+  
+
+}

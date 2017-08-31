@@ -1,0 +1,48 @@
+<class name="TestCases.VettingMenuTest">
+			</class>
+
+<class name="TestCases.ReportsMenuTest">
+			</class>
+
+====================================================================================
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Report ">
+
+
+	<test name="JibePageTesting">
+		<classes>
+			<class name="TestCases.MainTest">
+			</class>
+			<class name="TestCases.AdminMenuTest">
+			</class>
+			<class name="TestCases.CrewMenuTest">
+			</class>
+			<class name="TestCases.eFormsMenuTest">
+			</class>
+			<class name="TestCases.OperationsMenuTest">
+			</class>
+			<class name="TestCases.QualityMenuTest">
+			</class>
+			<class name="TestCases.PurchaseMenuTest">
+			</class>
+			<class name="TestCases.TechnicalMenuTest">
+			</class>
+			<class name="TestCases.TravelMenuTest">
+			</class>
+			<class name="TestCases.TrainingMenuTest">
+			</class>
+			<class name="TestCases.KpiMenuTest">
+			</class>
+			<class name="TestCases.HelpMenuTest">
+			</class>
+			
+			<class name="TestCases.ReportsMenuTest">
+			</class>
+			<class name="TestCases.EmailFunction">
+			</class>
+
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

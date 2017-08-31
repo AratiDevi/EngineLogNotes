@@ -1,0 +1,213 @@
+package testng1;
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
+import Java1.HelpMenuList;
+
+
+
+public class HelpMenuTest extends MainTest
+{
+	ExtentReports report;
+	ExtentTest test;
+	
+	HelpMenuList Hml =new HelpMenuList();
+	
+	
+	// MainMenus	HelpCenter	
+	/*	//Sub-Menus	SupportDesk
+	@Test(groups="Help",priority=115)
+	 public void SupportDesk() throws Exception
+	  {
+		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); Thread.sleep(100); 		
+
+		Hml.SupportDesk(driver);	
+		   
+		  String ExpectedTitle=data.getData(11,3,3).trim(); // It will taking the Expected Title name from the excel sheet.
+			
+		  String ActuleTitle=driver.getTitle().trim();		// taking the actual title name by the web site.
+			
+		  Hml.SShot(ExpectedTitle, ActuleTitle, driver); // if Title is not matching they it will take screen shot n store in folder
+			
+		// driver.get(Dashboard);// if the page is not exceuted then it will opne this url
+			
+			Assert.assertEquals(ExpectedTitle, ActuleTitle);
+			
+			 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); Thread.sleep(100); 
+	  }	*/
+	
+	
+	
+	
+	//Sub-Menus	TrainingVideos
+	@Test(dependsOnGroups = { "A" },priority=288)
+	 public void Databuilding() throws Exception
+	 {
+		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); Thread.sleep(100); 		
+		 
+		 test=report.startTest("Help Center-->Databuilding");
+
+		Hml.Databuilding(driver);	
+		
+		Assert.assertTrue(true);
+	 	  test.log(LogStatus.PASS, "Assert pass as condtion is true");
+			   
+		  String ExpectedTitle=data.getData(12,7,3).trim(); // It will taking the Expected Title name from the excel sheet.
+				
+			 String ActuleTitle=driver.getTitle().trim();		// taking the actual title name by the web site.
+				
+			 Hml.SShot(ExpectedTitle, ActuleTitle, driver); // if Title is not matching they it will take screen shot n store in folder
+				
+		// driver.get(Dashboard);// if the page is not exceuted then it will opne this url
+				
+			Assert.assertEquals(ExpectedTitle, ActuleTitle);
+				
+			 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); Thread.sleep(100); 
+  }
+	
+	//Sub-Menus	TrainingVideos
+	@Test(groups={"A"},priority=289)
+	public void SupportDesk555() throws Exception
+	 {
+		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); Thread.sleep(100); 	
+		 
+		 test=report.startTest("Help Center-->SupportDesk555");
+
+		Hml.SupportDesk555(driver);	
+		
+		Assert.assertTrue(true);
+	 	  test.log(LogStatus.PASS, "Assert pass as condtion is true");
+				   
+			 String ExpectedTitle=data.getData(12,8,3).trim(); // It will taking the Expected Title name from the excel sheet.
+					
+			 String ActuleTitle=driver.getTitle().trim();		// taking the actual title name by the web site.
+					
+			 Hml.SShot(ExpectedTitle, ActuleTitle, driver); // if Title is not matching they it will take screen shot n store in folder
+					
+		// driver.get(Dashboard);// if the page is not exceuted then it will opne this url
+					
+			Assert.assertEquals(ExpectedTitle, ActuleTitle);
+					
+			 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); Thread.sleep(100); 
+	  }
+	
+		
+		//Sub-Menus	TrainingVideos
+	@Test(groups={"A"},priority=290)
+	 public void TrainingVideos() throws Exception
+	  {
+		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); Thread.sleep(100); 	
+		 
+		 test=report.startTest("Help Center-->TrainingVideos");
+
+		Hml.TrainingVideos(driver);	
+		
+		Assert.assertTrue(true);
+	 	  test.log(LogStatus.PASS, "Assert pass as condtion is true");
+		   
+		  String ExpectedTitle=data.getData(12,4,3).trim(); // It will taking the Expected Title name from the excel sheet.
+			
+		  String ActuleTitle=driver.getTitle().trim();		// taking the actual title name by the web site.
+			
+		  Hml.SShot(ExpectedTitle, ActuleTitle, driver); // if Title is not matching they it will take screen shot n store in folder
+			
+		// driver.get(Dashboard);// if the page is not exceuted then it will opne this url
+			
+			Assert.assertEquals(ExpectedTitle, ActuleTitle);
+			
+			 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); Thread.sleep(100); 
+	  }
+	
+		//Sub-Menus	FAQ
+	@Test(groups={"A"},priority=291)
+	 public void FAQ() throws Exception
+	  {
+		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); Thread.sleep(100); 
+		 
+		 test=report.startTest("Help Center-->FAQ");
+
+		Hml.FAQ(driver);
+		
+		Assert.assertTrue(true);
+	 	  test.log(LogStatus.PASS, "Assert pass as condtion is true");
+		   
+		  String ExpectedTitle=data.getData(12,5,3).trim(); // It will taking the Expected Title name from the excel sheet.
+			
+		  String ActuleTitle=driver.getTitle().trim();		// taking the actual title name by the web site.
+			
+		  Hml.SShot(ExpectedTitle, ActuleTitle, driver); // if Title is not matching they it will take screen shot n store in folder
+			
+		// driver.get(Dashboard);// if the page is not exceuted then it will opne this url
+			
+			Assert.assertEquals(ExpectedTitle, ActuleTitle);
+			
+			 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); Thread.sleep(100); 
+	  }
+		//Sub-Menus	FAQTopic
+	@Test(groups={"A"},priority=292)
+	 public void FAQTopic() throws Exception
+	  {
+		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); Thread.sleep(100); 	
+		 
+		 test=report.startTest("Help Center-->FAQTopic");
+
+		Hml.FAQTopic(driver);	
+		
+		Assert.assertTrue(true);
+	 	  test.log(LogStatus.PASS, "Assert pass as condtion is true");
+		   
+		  String ExpectedTitle=data.getData(12,6,3).trim(); // It will taking the Expected Title name from the excel sheet.
+			
+		  String ActuleTitle=driver.getTitle().trim();		// taking the actual title name by the web site.
+			
+		  Hml.SShot(ExpectedTitle, ActuleTitle, driver); // if Title is not matching they it will take screen shot n store in folder
+		  
+		  Thread.sleep(1000);
+			
+		 //driver.get(Dashboard);// if the page is not exceuted then it will opne this url
+			
+			Assert.assertEquals(ExpectedTitle, ActuleTitle);
+			
+			 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); Thread.sleep(100); 
+	  }
+	
+	@AfterMethod
+	public void afterMethod(ITestResult result) {
+	    if (result.getStatus() == ITestResult.FAILURE) {
+	        test.log(LogStatus.FAIL, "Test failed " + result.getThrowable());
+	    } else if (result.getStatus() == ITestResult.SKIP) {
+	        test.log(LogStatus.SKIP, "Test skipped " + result.getThrowable());
+	    } else {
+	        test.log(LogStatus.PASS, "Test passed");
+	    }
+
+	    report.endTest(test);
+	    report.flush();
+}
+ 
+ @BeforeSuite
+  public void worklst() {
+      report = HelpMenuList.getReporter("C:\\Users\\Arati\\workspace\\JibeTesting\\Report 2.41.2\\JIBE\\menu.html");
+  }
+  
+ /* @AfterSuite
+public void reportesc() {
+      report.close();
+  }*/
+}

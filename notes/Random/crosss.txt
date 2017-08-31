@@ -1,0 +1,115 @@
+package cross;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+public class CrossBrow {
+	
+	WebDriver driver;
+	  
+	  @Test
+	  @Parameters("browser")
+	  public void Cross(String browserName) throws Exception {
+
+	   
+	   //String chrome=browser;
+	   /*
+	   if (browserName.equalsIgnoreCase("firefox"))
+	   {
+		   
+	    //System.setProperty("webdriver.gecko.driver", "C:\\Users\\Arati\\workspace\\geckodriver.exe");
+	    // System.setProperty("webdriver.firefox.driver", "C:\\Users\\Arati\\workspace\\geckodriver (2).exe");
+	    
+	    driver = new FirefoxDriver();
+	    
+	    Thread.sleep(3000);
+	    
+	   }*/
+		 
+		 if(browserName.equalsIgnoreCase("chrome"))
+		  {
+		   System.setProperty("webdriver.chrome.driver", "C:\\Users\\Arati\\workspace\\chromedriver.exe");
+		    
+		   driver = new ChromeDriver();
+		     
+	       Thread.sleep(3000);
+	       
+	           
+	           
+		  }
+		  
+		  
+		  else if(browserName.equalsIgnoreCase("IE")){
+			  
+			   System.setProperty("webdriver.ie.driver", "C:\\Users\\Arati\\workspace\\IEDriverServer.exe");
+
+			   driver = new InternetExplorerDriver();
+			     
+			   Thread.sleep(3000);
+			   
+			   driver.findElement(By.id("ctl00_MainContent_LoginUser_UserName")).sendKeys("arati");
+			   driver.findElement(By.id("ctl00_MainContent_LoginUser_Password")).sendKeys("jibe@1234");
+			   driver.findElement(By.id("ctl00_MainContent_LoginUser_LoginButton")).click();
+			   
+			   			     
+			    
+		 }
+
+		 
+		   driver.manage().window().maximize();
+		   
+		   driver.get("http://114.79.180.66/JIBE/Account/Login.aspx?");
+		   
+		   driver.findElement(By.id("ctl00_MainContent_LoginUser_UserName")).sendKeys("arati");
+		   driver.findElement(By.id("ctl00_MainContent_LoginUser_Password")).sendKeys("jibe@1234");
+		   driver.findElement(By.id("ctl00_MainContent_LoginUser_LoginButton")).click();
+		   
+		   System.out.println(driver.getTitle());
+		  // driver.quit();
+		 
+	  
+	  
+	 
+	  } 
+
+}
+==============================================================================================================
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+
+
+  <test name="ChromeTest">
+  
+  
+  <parameter name="browser" value="chrome"/>
+  
+  <classes>
+  <class name="cross.CrossBrow"/>
+  
+  </classes>
+  </test> 
+  
+  
+  
+  <test name="IEtest">
+  
+  <parameter name="browser" value="IE"/>
+  
+  <classes>
+  <class name="cross.CrossBrow"/>
+  
+  </classes>
+  
+  
+  </test>
+   <!-- Test -->
+</suite> <!-- Suite -->
+

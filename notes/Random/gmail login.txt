@@ -1,0 +1,78 @@
+public class GmailLogin
+{
+  
+  public String Log( WebDriver driver1)
+  {
+        WebDriver driver= driver1;
+
+        WebElement username = driver.findElement(By.id("Email")).clear();
+        username.sendKeys("rt@gmail.com");
+
+        driver.findElement(By.id("next")).click();
+
+        driver.manage().timeouts().implicitlyWait(20,  TimeUnit.SECONDS);
+
+        WebElement password = driver.findElement(By.id("Passwd"));
+        password.sendKeys("minu");
+
+        WebElement Signin= driver.findElement(By.id("signIn")).click();
+        
+        String title= driver.getTitle().trim();
+        return title;
+
+}
+
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+TestNG:
+
+
+  public class GmailLoginTest
+
+  { 
+  
+     public static WebDriver driver;
+
+
+      @BeforeSuite
+      public void beforesuite()
+      
+       {
+        System.setProperty(""webdriver.chrome.driver"," C:\\Users\\Ankita\\workspace\\chromedriver.exe");  // se
+
+        driver= new ChromeDriver();
+        driver.get("https://accounts.google.com");
+      
+        driver.manage().window().maximise();
+        driver.manage().timeouts().implicitlyWait(20,  TimeUnit.SECONDS);
+
+       }
+
+       @Test
+       public void Login()
+
+         {
+           Login l= new Login();
+           l.Log(driver);
+         }
+
+         @AfterSuite
+         public void aftersuite()
+         {
+          driver.close();
+         }
+
+        
+}

@@ -1,0 +1,62 @@
+
+package function;
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+
+
+public class RadioButton
+{
+	
+	
+	public String radioButton(WebDriver driver, String locatorType, String locatorvalue) throws Exception
+	 
+	 {
+	 
+	  switch(locatorType)
+	   {
+
+	   case "id":
+	          driver.findElement(By.id(locatorvalue)).click();
+	          break;
+
+	   case "name":
+		     driver.findElement(By.name(locatorvalue)).click();
+	         break;
+
+	    
+
+	   }
+
+	   Thread.sleep(3000);
+	   
+	   return null;
+
+	 }
+	
+	
+	
+
+}
+
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+RadioButton Redio = new RadioButton();
+
+ String input=data.getData(3, 180, 2);
+ String id = null;
+ Redio.radioButton(driver, id , input);
+
+
+
+public void purchaseCreateRequisition(WebDriver driver1) throws Exception
+	{
+	WebDriver driver=driver1;
+
+
+   p.purchaseCreateRequisition(driver); 

@@ -1,0 +1,22 @@
+<a id="oldcontent" href="listDetails.do?camp=1865"><u>Re-Call</u></a>    
+----------------------------------------------------------------------
+
+selenium.click("css=a[href*='listDetails.do'][id='oldcontent']");
+
+or
+
+selenium.click("xpath=//a[contains(@href,'listDetails.do') and @id='oldcontent']");
+
+
+
+public void TypeInField(String xpath, String value){
+    String val = value; 
+    WebElement element = driver.findElement(By.xpath(xpath));
+    element.clear();
+
+    for (int i = 0; i < val.length(); i++){
+        char c = val.charAt(i);
+        String s = new StringBuilder().append(c).toString();
+        element.sendKeys(s);
+    }       
+}

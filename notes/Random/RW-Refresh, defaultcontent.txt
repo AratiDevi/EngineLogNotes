@@ -1,0 +1,88 @@
+public static String frameSwitchBack(WebDriver driver, String locatorType, String locatorvalue) throws Exception                          FrameSwitchBack_Ctrl
+	 
+	 {
+		
+		switch(locatorType)
+		   {
+
+		   case "id":
+			     driver.switchTo().defaultContent();
+			     driver.findElement(By.id(locatorvalue)).click(); 
+			    
+		          break;
+
+		   case "name":
+			   driver.switchTo().defaultContent();                                                                               
+			     driver.findElement(By.name(locatorvalue)).click(); 
+			     
+		         break;
+
+		   case "xpath":
+			   driver.switchTo().defaultContent();
+			   driver.findElement(By.xpath(locatorvalue)).click();   
+	          
+		         break;
+		         
+		   case "linkText":
+			   driver.switchTo().defaultContent();
+			   driver.findElement(By.linkText(locatorvalue)).click(); 
+			    
+		         break;
+		         
+		   case "cssSelector":
+			   driver.switchTo().defaultContent();
+			   driver.findElement(By.cssSelector(locatorvalue)).click(); 
+			     
+		         break;
+
+		   }
+	   
+	   return null ;
+	 
+
+	   }
+	
+	
+	public static String refresh(WebDriver driver, String locatorType, String locatorvalue) throws Exception                               Refresh_Ctrl
+	 
+	 {
+		
+		switch(locatorType)
+		   {
+
+		   case "id":
+			     driver.navigate().refresh();
+			     driver.findElement(By.id(locatorvalue)).click(); 
+			    
+		          break;
+
+		   case "name":
+			   driver.navigate().refresh();
+			     driver.findElement(By.name(locatorvalue)).click(); 
+			     
+		         break;
+
+		   case "xpath":
+			   driver.navigate().refresh();
+			   driver.findElement(By.xpath(locatorvalue)).click();   
+	          
+		         break;
+		         
+		   case "linkText":
+			   driver.navigate().refresh();
+			   driver.findElement(By.linkText(locatorvalue)).click(); 
+			    
+		         break;
+		         
+		   case "cssSelector":
+			   driver.navigate().refresh();
+			   driver.findElement(By.cssSelector(locatorvalue)).click(); 
+			     
+		         break;
+
+		   }
+	   
+	   return null ;
+	 
+
+	   }

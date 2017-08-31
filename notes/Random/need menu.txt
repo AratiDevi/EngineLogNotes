@@ -1,0 +1,3 @@
+Verify popups appearance
+Verify texts,dropdowns,text boxes,buttons and icons donot overlap
+Verify tooltip appearance

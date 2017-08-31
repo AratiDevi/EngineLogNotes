@@ -1,0 +1,21 @@
+1- navigate_to(WebDriver driver, String locatorType, String locatorvalue )
+
+2- click_element(WebDriver driver, String locatorType, String locatorvalue)
+
+3- sendKeys(WebDriver driver, String locatorType, String locatorvalue, String value)
+
+4- dropdown(WebDriver driver, String locatorType, String locatorvalue, String inputparameter)
+
+
+
+5- checkbox(WebDriver driver, String locatorType, String locatorvalue)
+
+6- radiobutton(WebDriver driver, String locatorType, String locatorvalue)
+
+7- uploading file(WebDriver driver, String locatorType, String path)
+
+    //Find the element of upload button and send the path
+    WebElement element= driver.findElement(By.name("datafile"));
+    element.sendKeys("C:\Users\Easy\Desktop\testfile.txt");
+
+8- downloading file()

@@ -1,0 +1,46 @@
+public static String dropdownCheckbox(WebDriver driver, String locatorType, String locatorvalue1,String locatorvalue2,String locatorvalue3) throws Exception
+  
+  {
+  
+   switch(locatorType)
+    {
+
+    case "id":
+       driver.findElement(By.id(locatorvalue1)).click();   // Arrow
+       Thread.sleep(1000);
+       driver.findElement(By.id(locatorvalue2)).click();   // Select CheckBox
+       Thread.sleep(1000);
+       driver.findElement(By.id(locatorvalue3)).click();   // OK Button
+           break;
+
+    case "name":
+       driver.findElement(By.name(locatorvalue1)).click();   // Arrow
+       Thread.sleep(1000); 
+       driver.findElement(By.name(locatorvalue2)).click();   // Select CheckBox
+       Thread.sleep(1000);
+       driver.findElement(By.name(locatorvalue3)).click();   // OK Button
+          break;
+
+    case "xpath":
+       driver.findElement(By.xpath(locatorvalue1)).click();    // Arrow
+       Thread.sleep(1000);
+       driver.findElement(By.xpath(locatorvalue2)).click();    // Select CheckBox
+       Thread.sleep(1000);
+       driver.findElement(By.xpath(locatorvalue3)).click();    // OK Button
+          break;
+          
+    case "linkText":
+       driver.findElement(By.linkText(locatorvalue1)).click();    // Arrow
+       Thread.sleep(1000);
+       driver.findElement(By.linkText(locatorvalue2)).click();    // Select CheckBox
+       Thread.sleep(1000);
+       driver.findElement(By.linkText(locatorvalue3)).click();    // OK Button
+          break;
+
+    }
+
+    Thread.sleep(1000);
+    
+    return null;
+
+  }

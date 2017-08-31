@@ -1,0 +1,32 @@
+Element.getElementsByTagName is similar to Document.getElementsByTagName(), except that its search is restricted to those elements which are descendants of the specified element.
+
+Syntax
+-------
+
+elements = element.getElementsByTagName(tagName)
+elements is a live HTMLCollection of found elements in the order they appear in the sub-tree. If no elements were found, the HTMLCollection is empty.
+element is the element from where the search should start. Note that only the descendants of this element are included in the search, but not the element itself.
+tagName is the qualified name to look for. The special string "*" represents all elements. For compatibility with XHTML, lower-case should be used.
+
+
+
+Example
+-------
+
+
+// check the alignment on a number of cells in a table. 
+
+var table = document.getElementById("forecast-table"); 
+
+var cells = table.getElementsByTagName("td"); 
+
+for (var i = 0; i < cells.length; i++) { 
+
+    var status = cells[i].getAttribute("data-status"); 
+
+    if ( status == "open" ) { 
+
+        // grab the data 
+
+    }
+}

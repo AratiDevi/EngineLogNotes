@@ -1,0 +1,7 @@
+<class name="TestCases.EmailFunction">
+			</class>
+
+
+ExtentReports: By using this class we set the path where our reports need to generate.
+
+ExtentTest: By using this class we could generate the logs in the report.

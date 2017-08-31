@@ -1,0 +1,52 @@
+package Java1;
+
+import org.testng.annotations.Test;
+
+public class a1 {
+
+	
+	@Test(dependsOnGroups = { "arati","regression"})
+	public void E(){
+		
+		System.out.println(" main case");
+	}
+	
+	@Test(groups={"devi"})
+	public void A(){
+		
+		System.out.println("case 1");
+	}
+	
+	
+	@Test(groups={"regression"})
+	public void B(){
+		
+		System.out.println("case 2");
+	}
+	
+	
+	@Test(groups={"arati"})
+	public void D(){
+		
+		System.out.println("case 3");
+	}
+	
+	
+	@Test(groups={"smoke"})
+	public void F(){
+		
+		System.out.println("case 4");
+	}
+	
+}
+
+
+
+
+<methods>
+      <include name="Databuilding" />
+        <exclude name="SupportDesk555" />
+        <exclude name="TrainingVideos" />
+        <include name="FAQ" />
+        <include name="FAQTopic" />
+      </methods

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="testngcase.EngineLogBookTest">
+        <methods>
+          <include name="Fleet_A_Vessel9"/>
+          <include name="Fleet_A_Vessel6"/>
+          <include name="Fleet_A_Vessel5"/>
+          <include name="Fleet_A_Vessel8"/>
+          <include name="Fleet_A_Vessel7"/>
+          <include name="beforeSuite"/>
+          <include name="EngineLogBook"/>
+          <include name="FleetOffice_Vessel3"/>
+          <include name="Fleet_B_Vessel2"/>
+          <include name="Fleet_A_Vessel2"/>
+          <include name="FleetOffice_Vessel2"/>
+          <include name="Fleet_A_Vessel1"/>
+          <include name="Fleet_A_Vessel4"/>
+          <include name="Fleet_A_Vessel3"/>
+          <include name="FleetOffice_Vessel1"/>
+          <include name="Fleet_B_Vessel1"/>
+          <include name="Fleet_A_Vessel10"/>
+        </methods>
+      </class> <!-- testngcase.EngineLogBookTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -1,0 +1,52 @@
+public class CommonFunction
+{
+
+ public static String navigate_to(WebDriver driver, String url)
+
+{
+
+  driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+  driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+
+  driver.get(url);
+
+  Thread.sleep(3000)
+
+  driver.manage().window().maximize();
+
+
+}
+
+  
+  
+ public static String radioButton(WebDriver driver, String locatorType, String locatorvalue)
+ 
+ {
+ 
+  switch(locatorType)
+   {
+
+   case1 "id":
+          driver.findElement(By.id("locatorvalue")).click();
+          break;
+
+   case2 "name":
+          driver.findElement(By.name("locatorvalue")).click();
+          break;
+
+   case3 "xpath":
+
+          driver.findElement(By.xpath("locatorvalue")).click();
+          break;
+
+   case4 "linktext":     
+
+          driver.findElement(By.linktext("locatorvalue")).click();
+          break; 
+
+   }
+
+   Thread.sleep(3000)
+
+ }
+}

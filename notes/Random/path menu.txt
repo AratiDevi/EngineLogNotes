@@ -1,0 +1,42 @@
+"Close icon is not visible when word in typed in search text field.
+Crew>  Admin > Crew Joining Seniority
+Crew > Crew Index
+Crew  >Crew Evaluation>  Evaluation Schedules
+Crew > Crew Evaluation>  Evaluation Planning
+Crew  >Crew Evaluation>  Question Bank
+Crew > Crew Accounts>  CTM Index
+Crew>  Crew Accounts > Company Seniority Reward
+Crew>  Crew Agency Fee>  Crew Agency Fee Report
+Crew>  Crew Card Index
+Crew > Crew Mail System > CrewMail Index
+Crew > Crew Mail System > CrewMail - Admin 
+Crew>  Reports>  Crew Medical History Viewer
+Operations > Admin > Water In Hold/Tank
+Operations > Add Voyage Number
+Travel  >New Travel Request"
+
+
+
+
+
+
+"No line in hyperlink on content lists.
+Crew > Event Index
+Crew > Crew Accounts > Company Seniority Reward(S/C, Reward Status)
+Crew > Crew List History(Staff Code)
+Crew > Reports  >Crew Feedback Viewer(Staff Code)
+Crew > Reports  >Crew Medical History Viewer
+Crew  Reports  Crew Retention Rate(St/Code)
+Crew>  Reports > Crew Retention Rate(PI List)
+Operations>  Admin > Water In Hold/Tank
+Operations > Voyage Reports > Offland report(Report, Others)
+Operations>  Bunker Sample Reports(REport ,Attachment)
+Operations > Bunker Sample Reports(Report, Other)
+Operations > Bunker Sample Lab(Report,BDN & Others)
+Operations > Bunker Sample Lab(Report,BDN & Others)
+Operations>  Deck Log Book(Scale)
+Operations>  DeckLogBookLibHoldTank(Vessel)
+Travel > Travel Request Index(Req ID)
+Quality  >QMS>  QMS Sync Approval(File Name)
+Quality>  EMS
+Quality>  SCM  >SCM Absentees(Staff Name)"

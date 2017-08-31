@@ -1,0 +1,79 @@
+First you have to locate the frame id and define it in a WebElement
+
+For ex:- WebElement fr = driver.findElementById("id");
+
+Then switch to the frame using this code:- driver.switchTo().frame("Frame_ID");
+
+An example script:-
+
+WebElement fr = driver.findElementById("theIframe");
+
+driver.switchTo().frame(fr);
+
+Then to move out of frame use:- driver.switchTo().defaultContent();
+
+
+
+
+
+
+
+
+
+
+
+// Store the current window handle
+String winHandleBefore = driver.getWindowHandle();
+
+// Perform the click operation that opens new window
+
+// Switch to new window opened
+for(String winHandle : driver.getWindowHandles()){
+    driver.switchTo().window(winHandle);
+}
+
+// Perform the actions on new window
+
+// Close the new window, if that window no more required
+driver.close();
+
+// Switch back to original browser (first window)
+driver.switchTo().window(winHandleBefore);
+
+// Continue with original browser (first window)
+
+
+
+
+
+
+
+
+for (String window:windowHandles){
+
+        //if it contains the current window we want to eliminate that from switchTo();
+        if (window != currentWindowHandle){
+            //Now switchTo new Tab.
+            driver.switchTo().window(window);
+            //Do whatever you want to do here.
+
+            //Close the newly opened tab
+            driver.close();
+
+: S002593
+Password   : 93hwlbUXqUVYyPuNs+Mtxw==
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

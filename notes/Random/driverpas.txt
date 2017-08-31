@@ -1,0 +1,50 @@
+package TestCases;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+
+import common_Function.RW;
+import common_Function.loginpage;
+
+public class MainTest extends RW {
+	
+	
+
+	public static WebDriver driver;
+
+	loginpage L = new loginpage(); //
+
+	@BeforeSuite
+	public void initialioseBrowser() throws Exception {
+
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Arati\\workspace\\Driver\\chromedriver.exe");
+
+		driver = new ChromeDriver();
+
+		driver.get(url);
+
+		driver.manage().window().maximize();
+
+		L.Login(driver);
+
+		Thread.sleep(100);
+
+	}
+	
+	
+	@AfterSuite
+	public void closeBrowser() {
+
+		// it is used for sending the email
+		driver.quit();
+
+		//SendEmail SendEmail = new SendEmail();
+
+		//SendEmail.Send();
+		
+		
+	}
+
+}

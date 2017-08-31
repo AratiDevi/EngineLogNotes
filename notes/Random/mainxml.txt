@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+
+
+
+  <test name="MenusJibePageTesting">
+  
+  <parameter name="browser" value="chrome"/>
+  
+    <classes>
+    
+    <class name="TestCases.MainTest">
+	</class>
+    
+    
+    <class name="TestCases.HelpMenuTest">
+      </class>
+      
+      
+      <class name="TestCases.TravelMenuTest">
+      </class>
+    
+      
+    
+      <class name="TestCases.TechnicalMenuTest">
+     </class>
+      
+      
+      <class name="TestCases.ReportsMenuTest">
+      </class>
+      
+      <class name="TestCases.CrewMenuTest">
+      </class>
+      
+      <class name="TestCases.eFormsMenuTest">
+      </class>
+      
+      <class name="TestCases.TrainingMenuTest">
+      </class>
+      
+      <class name="TestCases.OperationsMenuTest">
+      </class>
+      
+      <class name="TestCases.PurchaseMenuTest">
+      </class>
+      
+      <class name="TestCases.QualityMenuTest">
+      </class>
+      
+      <class name="TestCases.KpiMenuTest">
+      </class>
+      
+      <class name="TestCases.AdminMenuTest">
+      </class>
+      
+       <class name="TestCases.EmailFunction">
+      </class>
+      
+    </classes>
+    
+  </test> <!-- Test -->
+  
+  
+  <test name="IEtest">
+  
+  <parameter name="browser" value="IE"/>
+  
+    <classes>
+    
+    <class name="TestCases.MainTest">
+	</class>
+    
+    
+    <class name="TestCases.HelpMenuTest">
+      </class>
+      
+      
+      <class name="TestCases.TravelMenuTest">
+      </class>
+    
+      
+    
+      <class name="TestCases.TechnicalMenuTest">
+     </class>
+      
+      
+      <class name="TestCases.ReportsMenuTest">
+      </class>
+      
+      <class name="TestCases.CrewMenuTest">
+      </class>
+      
+      <class name="TestCases.eFormsMenuTest">
+      </class>
+      
+      <class name="TestCases.TrainingMenuTest">
+      </class>
+      
+      <class name="TestCases.OperationsMenuTest">
+      </class>
+      
+      <class name="TestCases.PurchaseMenuTest">
+      </class>
+      
+      <class name="TestCases.QualityMenuTest">
+      </class>
+      
+      <class name="TestCases.KpiMenuTest">
+      </class>
+      
+      <class name="TestCases.AdminMenuTest">
+      </class>
+      
+       <class name="TestCases.EmailFunction">
+      </class>
+      
+    </classes>
+    
+  </test>
+  
+</suite> <!-- Suite -->

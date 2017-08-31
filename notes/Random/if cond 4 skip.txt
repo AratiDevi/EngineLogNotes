@@ -1,0 +1,21 @@
+	String ExpectedTitle=data.getData(11,5,3).trim(); // It will taking the Expected Title name from the excel sheet.
+		
+		String ActualTitle=driver.getTitle().trim();		// taking the actual title name by the web site.
+			
+		//Assert.assertEquals(ExpectedTitle, ActualTitle);
+		
+       if(ExpectedTitle!=null)
+			 
+		 {
+
+		    if(ExpectedTitle.equals(ActualTitle)){
+		    	  System.out.println("Title matches");
+		    	
+		    }
+		        else {
+		        	System.out.println("No Access");
+		        }
+			
+		
+		 }
+		

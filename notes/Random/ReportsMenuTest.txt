@@ -1,0 +1,209 @@
+package TestCases;
+
+import java.util.concurrent.TimeUnit;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import MenusList.ReportsMenuList;
+
+
+public class ReportsMenuTest extends MainTest{
+	ReportsMenuList Repo =new ReportsMenuList();
+	
+	
+	  @Test(priority=0)
+	  public void PMSOverdue() throws Exception
+	  
+	  {
+		  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
+
+		  Repo.PMSOverdue(driver);	
+		   
+		  String ExpectedTitle=data.getData(8,54,3).trim(); // It will taking the Expected Title name from the excel sheet.
+			
+		  String ActuleTitle=driver.getTitle().trim();		// taking the actual title name by the web site.
+			
+		  Repo.SShot(ExpectedTitle, ActuleTitle, driver); // if Title is not matching they it will take screen shot n store in folder
+			
+		// driver.get(Dashboard);// if the page is not exceuted then it will opne this url
+			
+		  Assert.assertEquals(ExpectedTitle, ActuleTitle);
+			
+	      driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); Thread.sleep(100);   
+	  }
+	  
+	  @Test(priority=1)
+	  public void NearMisses() throws Exception
+	  
+	  {
+		  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
+
+		  Repo.NearMisses(driver);	
+		   
+		  String ExpectedTitle=data.getData(8,55,3).trim(); // It will taking the Expected Title name from the excel sheet.
+			
+		  String ActuleTitle=driver.getTitle().trim();		// taking the actual title name by the web site.
+			
+		  Repo.SShot(ExpectedTitle, ActuleTitle, driver); // if Title is not matching they it will take screen shot n store in folder
+			
+		// driver.get(Dashboard);// if the page is not exceuted then it will opne this url
+			
+		  Assert.assertEquals(ExpectedTitle, ActuleTitle);
+			
+	      driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); Thread.sleep(100);   
+	  }
+	  
+	  @Test(priority=2)
+	  public void IncidentsPersonnel() throws Exception
+	  
+	  {
+		  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
+
+		  Repo.IncidentsPersonnel(driver);	
+		   
+		  String ExpectedTitle=data.getData(8,56,3).trim(); // It will taking the Expected Title name from the excel sheet.
+			
+		  String ActuleTitle=driver.getTitle().trim();		// taking the actual title name by the web site.
+			
+		  Repo.SShot(ExpectedTitle, ActuleTitle, driver); // if Title is not matching they it will take screen shot n store in folder
+			
+		// driver.get(Dashboard);// if the page is not exceuted then it will opne this url
+			
+		  Assert.assertEquals(ExpectedTitle, ActuleTitle);
+			
+	      driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); Thread.sleep(100);   
+	  }
+	  
+	  
+	  @Test(priority=3)
+	  public void IncidentswithInjury() throws Exception
+	  
+	  {
+		  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
+
+		  Repo.IncidentswithInjury(driver);	
+		   
+		  String ExpectedTitle=data.getData(8,57,3).trim(); // It will taking the Expected Title name from the excel sheet.
+			
+		  String ActuleTitle=driver.getTitle().trim();		// taking the actual title name by the web site.
+			
+		  Repo.SShot(ExpectedTitle, ActuleTitle, driver); // if Title is not matching they it will take screen shot n store in folder
+			
+		// driver.get(Dashboard);// if the page is not exceuted then it will opne this url
+			
+		  Assert.assertEquals(ExpectedTitle, ActuleTitle);
+			
+	      driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); Thread.sleep(100);   
+	  }
+	  
+	  @Test(priority=4)
+	  public void IncidentswithDeath() throws Exception
+	  
+	  {
+		  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
+
+		  Repo.IncidentswithDeath(driver);	
+		   
+		  String ExpectedTitle=data.getData(8,58,3).trim(); // It will taking the Expected Title name from the excel sheet.
+			
+		  String ActuleTitle=driver.getTitle().trim();		// taking the actual title name by the web site.
+			
+		  Repo.SShot(ExpectedTitle, ActuleTitle, driver); // if Title is not matching they it will take screen shot n store in folder
+			
+		// driver.get(Dashboard);// if the page is not exceuted then it will opne this url
+			
+		  Assert.assertEquals(ExpectedTitle, ActuleTitle);
+			
+	      driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); Thread.sleep(100);   
+	  }
+	  
+	  @Test(priority=5)
+	  public void IncidentsPollution() throws Exception
+	  
+	  {
+		  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
+
+		  Repo.IncidentsPollution(driver);	
+		   
+		  String ExpectedTitle=data.getData(8,59,3).trim(); // It will taking the Expected Title name from the excel sheet.
+			
+		  String ActuleTitle=driver.getTitle().trim();		// taking the actual title name by the web site.
+			
+		  Repo.SShot(ExpectedTitle, ActuleTitle, driver); // if Title is not matching they it will take screen shot n store in folder
+			
+		// driver.get(Dashboard);// if the page is not exceuted then it will opne this url
+			
+		  Assert.assertEquals(ExpectedTitle, ActuleTitle);
+			
+	      driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); Thread.sleep(100);   
+	  }
+	  
+	  
+	  @Test(priority=6)
+	  public void InternalInspections() throws Exception
+	  
+	  {
+		  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
+
+		  Repo.InternalInspections(driver);	
+		   
+		  String ExpectedTitle=data.getData(8,60,3).trim(); // It will taking the Expected Title name from the excel sheet.
+			
+		  String ActuleTitle=driver.getTitle().trim();		// taking the actual title name by the web site.
+			
+		  Repo.SShot(ExpectedTitle, ActuleTitle, driver); // if Title is not matching they it will take screen shot n store in folder
+			
+		// driver.get(Dashboard);// if the page is not exceuted then it will opne this url
+			
+		  Assert.assertEquals(ExpectedTitle, ActuleTitle);
+			
+	      driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); Thread.sleep(100);   
+	  }
+	  
+	  @Test(priority=7)
+	  public void PortStateControlDeficiencies() throws Exception
+	  
+	  {
+		  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
+
+		  Repo.PortStateControlDeficiencies(driver);	
+		   
+		  String ExpectedTitle=data.getData(8,61,3).trim(); // It will taking the Expected Title name from the excel sheet.
+			
+		  String ActuleTitle=driver.getTitle().trim();		// taking the actual title name by the web site.
+			
+		  Repo.SShot(ExpectedTitle, ActuleTitle, driver); // if Title is not matching they it will take screen shot n store in folder
+			
+		// driver.get(Dashboard);// if the page is not exceuted then it will opne this url
+			
+		  Assert.assertEquals(ExpectedTitle, ActuleTitle);
+			
+	      driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); Thread.sleep(100);   
+	  }
+	  
+	  @Test(priority=8)
+	  public void VettingReports() throws Exception
+	  
+	  {
+		  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
+
+		  Repo.VettingReports(driver);	
+		   
+		  String ExpectedTitle=data.getData(8,62,3).trim(); // It will taking the Expected Title name from the excel sheet.
+			
+		  String ActuleTitle=driver.getTitle().trim();		// taking the actual title name by the web site.
+			
+		  Repo.SShot(ExpectedTitle, ActuleTitle, driver); // if Title is not matching they it will take screen shot n store in folder
+			
+		// driver.get(Dashboard);// if the page is not exceuted then it will opne this url
+			
+		  Assert.assertEquals(ExpectedTitle, ActuleTitle);
+			
+	      driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); Thread.sleep(100);   
+	  }
+	  
+	  
+	 
+	  
+}
